@@ -4,7 +4,6 @@
         file_put_contents("./thetas.csv", "0,0");
     }
     $thetas = str_getcsv(file_get_contents("./thetas.csv"), ",");
-//    print_r($thetas);
     echo "Enter a number of kilometers > 0 (must be int) :\n";
     $km = intval(fgets(STDIN));
     if ($km != 0) {

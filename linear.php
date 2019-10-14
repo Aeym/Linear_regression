@@ -1,9 +1,6 @@
 <?php 
 
     $csv = array_map('str_getcsv', file('data.csv')); 
-    // print_r($csv);
-
-    
     $GLOBALS["data"] = normalized_data($csv);
     $GLOBALS["lrate"] = 0.1;
 
@@ -16,7 +13,6 @@
         $theta1 = 0;
         for ($i = 0; $i < 10000; $i++) {
             $tmp_thetas = new_thetas($theta0, $theta1);
-            // print_r($tmp_thetas);
             $theta0 -= $tmp_thetas[0];
             $theta1 -= $tmp_thetas[1];
         }
